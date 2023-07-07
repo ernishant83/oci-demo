@@ -1,5 +1,5 @@
 provider "oci" {
-    region = us-ashburn-1
+    region = "us-ashburn-1"
 }
 variable "bucket_namespace" {
     default = "idamb95plss4"
