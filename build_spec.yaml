@@ -72,16 +72,10 @@ steps:
       cd ${OCI_WORKSPACE_DIR}/node_express
       npm test
 
-  - type: Command
-    timeoutInSeconds: 1200
-    name: "Build container image"
-    command: |
-      cd ${OCI_WORKSPACE_DIR}/node_express
-      docker build --pull --rm -t node-express-getting-starter .
 
-outputArtifacts:
-  - name: APPLICATION_DOCKER_IMAGE
-    type: DOCKER_IMAGE
+#outputArtifacts:
+ # - name: APPLICATION_DOCKER_IMAGE
+  #  type: DOCKER_IMAGE
     # this location tag doesn't effect the tag used to deliver the container image
     # to the Container Registry
-    location: node-express-getting-starter:latest
+   # location: node-express-getting-starter:latest
